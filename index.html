@@ -5,207 +5,245 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>डिजिटल जनसेवा एवं साइबर केंद्र</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial, sans-serif;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-header{
-background:linear-gradient(135deg,#003366,#0059b3);
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* TOP BAR */
+.topbar{
+background:linear-gradient(90deg,#ff9933,#ffffff,#138808);
+padding:8px;
+text-align:center;
+font-weight:600;
+}
+
+/* HERO SECTION */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
 text-align:center;
-padding:60px 20px;
+overflow:hidden;
 }
 
-header h1{
-font-size:42px;
-margin:10px 0;
+.hero video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
 }
 
-header p{
-font-size:20px;
+.hero-content{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:10px;
 }
 
-.section{
-padding:60px 20px;
-max-width:1200px;
-margin:auto;
+.csc-logo{
+font-size:40px;
+font-weight:700;
+background:linear-gradient(45deg,orange,green,blue,red);
+-webkit-background-clip:text;
+color:transparent;
+margin-bottom:20px;
 }
 
-.section h2{
-text-align:center;
-font-size:36px;
-margin-bottom:40px;
-color:#003366;
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
 }
 
+.hero p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+/* SERVICES */
 .services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+padding:60px 10%;
+background:white;
 }
 
-.card{
-background:white;
+.services h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-box{
+background:#f0f4ff;
 padding:25px;
 border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover{
-transform:scale(1.05);
+.service-box:hover{
+transform:translateY(-10px);
 }
 
-.card h3{
-color:#0059b3;
+.service-box h3{
 font-size:22px;
+margin-bottom:10px;
+color:#004aad;
 }
 
+.service-box p{
+font-size:16px;
+}
+
+/* VIDEO SLIDER */
+.slider{
+margin-top:50px;
+text-align:center;
+}
+
+.slider video{
+width:80%;
+border-radius:10px;
+}
+
+/* CONTACT */
+.contact{
+background:#004aad;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+.contact h2{
+font-size:35px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
 footer{
-background:#003366;
+background:#111;
 color:white;
 text-align:center;
-padding:25px;
+padding:15px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-size:18px;
-}
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="topbar">
+भारत सरकार अधिकृत CSC डिजिटल सेवा केंद्र
+</div>
+
+<section class="hero">
+<video autoplay muted loop>
+<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+<div class="csc-logo">CSC</div>
 <h1>डिजिटल जनसेवा एवं साइबर केंद्र</h1>
 <p>मनपुर मोड़, सुजागंज, जिला अयोध्या, उत्तर प्रदेश</p>
-<p>📞 मोबाइल: +91 6393017868 (WhatsApp उपलब्ध)</p>
-</header>
+<p>📞 +91 6393017868 (WhatsApp उपलब्ध)</p>
+</div>
+</section>
 
-<div class="section">
+<section class="services">
 <h2>गांव की सभी ऑनलाइन सेवाएं एक ही स्थान पर</h2>
 
-<div class="services">
+<div class="service-grid">
 
-<div class="card">
-<h3>1. आधार कार्ड सेवा</h3>
-<p>नया आधार पंजीकरण, सुधार, मोबाइल लिंक, पता परिवर्तन, डाउनलोड एवं प्रिंट।</p>
+<div class="service-box">
+<h3>आधार कार्ड सेवा</h3>
+<p>नया आधार, अपडेट, मोबाइल लिंकिंग, पता सुधार।</p>
 </div>
 
-<div class="card">
-<h3>2. पैन कार्ड सेवा</h3>
-<p>नया पैन आवेदन, पैन सुधार, डुप्लीकेट पैन कार्ड।</p>
+<div class="service-box">
+<h3>पैन कार्ड सेवा</h3>
+<p>नया पैन कार्ड, सुधार, रीप्रिंट सुविधा।</p>
 </div>
 
-<div class="card">
-<h3>3. पासपोर्ट आवेदन</h3>
-<p>नया पासपोर्ट, रिन्यूअल, अपॉइंटमेंट बुकिंग।</p>
+<div class="service-box">
+<h3>पासपोर्ट सेवा</h3>
+<p>नया पासपोर्ट आवेदन, दस्तावेज सत्यापन।</p>
 </div>
 
-<div class="card">
-<h3>4. रेलवे टिकट बुकिंग</h3>
-<p>IRCTC से कन्फर्म टिकट, तत्काल टिकट।</p>
+<div class="service-box">
+<h3>रेलवे टिकट</h3>
+<p>IRCTC ऑनलाइन टिकट बुकिंग सुविधा।</p>
 </div>
 
-<div class="card">
-<h3>5. आय, जाति, निवास प्रमाण पत्र</h3>
-<p>ऑनलाइन आवेदन और प्रिंट सुविधा।</p>
+<div class="service-box">
+<h3>बिजली बिल भुगतान</h3>
+<p>ऑनलाइन बिजली बिल भुगतान।</p>
 </div>
 
-<div class="card">
-<h3>6. वृद्धा पेंशन / विधवा पेंशन</h3>
-<p>सरकारी पेंशन योजना आवेदन।</p>
+<div class="service-box">
+<h3>जाति / आय / निवास प्रमाणपत्र</h3>
+<p>ऑनलाइन आवेदन और प्रिंट।</p>
 </div>
 
-<div class="card">
-<h3>7. राशन कार्ड सेवा</h3>
-<p>नया आवेदन, नाम जोड़ना/हटाना।</p>
+<div class="service-box">
+<h3>पेंशन योजना</h3>
+<p>वृद्धा, विधवा, दिव्यांग पेंशन आवेदन।</p>
 </div>
 
-<div class="card">
-<h3>8. बिजली बिल भुगतान</h3>
-<p>ऑनलाइन बिजली बिल जमा सुविधा।</p>
+<div class="service-box">
+<h3>प्रधानमंत्री योजना</h3>
+<p>आवास, शौचालय, किसान योजना।</p>
 </div>
 
-<div class="card">
-<h3>9. मोबाइल / DTH रिचार्ज</h3>
-<p>सभी कंपनी का रिचार्ज उपलब्ध।</p>
+<div class="service-box">
+<h3>बैंकिंग सेवा</h3>
+<p>मनी ट्रांसफर, AEPS, मिनी स्टेटमेंट।</p>
 </div>
 
-<div class="card">
-<h3>10. बैंकिंग सेवा (AEPS)</h3>
-<p>पैसा निकासी, जमा, बैलेंस चेक।</p>
-</div>
-
-<div class="card">
-<h3>11. किसान योजना</h3>
-<p>PM किसान, फसल पंजीकरण, कृषि योजना।</p>
-</div>
-
-<div class="card">
-<h3>12. श्रमिक कार्ड</h3>
-<p>लेबर कार्ड रजिस्ट्रेशन।</p>
-</div>
-
-<div class="card">
-<h3>13. वोटर ID सेवा</h3>
-<p>नया वोटर कार्ड, सुधार, डाउनलोड।</p>
-</div>
-
-<div class="card">
-<h3>14. छात्रवृत्ति आवेदन</h3>
-<p>ऑनलाइन स्कॉलरशिप फॉर्म भरना।</p>
-</div>
-
-<div class="card">
-<h3>15. ऑनलाइन फॉर्म सेवा</h3>
-<p>सरकारी/प्राइवेट नौकरी फॉर्म।</p>
-</div>
-
-<div class="card">
-<h3>16. पुलिस वेरिफिकेशन</h3>
-<p>ऑनलाइन आवेदन सुविधा।</p>
-</div>
-
-<div class="card">
-<h3>17. जन्म प्रमाण पत्र</h3>
-<p>नया आवेदन और डाउनलोड।</p>
-</div>
-
-<div class="card">
-<h3>18. मृत्यु प्रमाण पत्र</h3>
-<p>ऑनलाइन सेवा।</p>
-</div>
-
-<div class="card">
-<h3>19. गैस बुकिंग</h3>
-<p>एलपीजी बुकिंग एवं सब्सिडी जांच।</p>
-</div>
-
-<div class="card">
-<h3>20. साइबर कैफे सेवा</h3>
-<p>प्रिंट, स्कैन, फोटो, लैमिनेशन सुविधा।</p>
+<div class="service-box">
+<h3>फसल बीमा</h3>
+<p>प्रधानमंत्री फसल बीमा योजना।</p>
 </div>
 
 </div>
+
+<div class="slider">
+<h2>हमारी सेवाओं की झलक</h2>
+<video autoplay muted loop>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+</video>
 </div>
+
+</section>
+
+<section class="contact">
+<h2>संपर्क करें</h2>
+<p>📍 मनपुर मोड़, सुजागंज, जिला अयोध्या, उत्तर प्रदेश</p>
+<p>📞 +91 6393017868</p>
+</section>
 
 <footer>
-© 2025 डिजिटल जनसेवा एवं साइबर केंद्र | सभी अधिकार सुरक्षित
+© 2026 डिजिटल जनसेवा एवं साइबर केंद्र | सभी अधिकार सुरक्षित
 </footer>
-
-<a class="whatsapp" href="https://wa.me/916393017868">WhatsApp</a>
 
 </body>
 </html>
